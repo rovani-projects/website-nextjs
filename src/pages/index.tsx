@@ -1,5 +1,6 @@
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,12 +17,12 @@ export default function Home() {
             <p className="text-xl text-gray-600 mb-8">
               We help businesses achieve their goals through strategic consulting and expert implementation.
             </p>
-            <a
+            <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg inline-block"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </section>
