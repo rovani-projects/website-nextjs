@@ -8,7 +8,7 @@ type ProjectProps = {
   frontmatter: {
     title: string;
     description: string;
-    [key: string]: any;
+    [key: string]: unknown;
   };
 };
 

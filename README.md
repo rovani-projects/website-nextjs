@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
+## Development
+
+After cloning the repository, run:
+
+```bash
+npm run setup-hooks
+```
+
 ## Getting Started
 
 First, run the development server:

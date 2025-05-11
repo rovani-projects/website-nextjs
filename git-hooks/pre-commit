@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Get current branch name
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# Run TypeScript check
+echo "Running TypeScript check..."
+npx tsc --noEmit
+TYPE_CHECK_RESULT=$?
+
+# If we're on main branch and type-check failed, prevent commit
+if [ "$BRANCH" = "main" ] && [ $TYPE_CHECK_RESULT -ne 0 ]; then
+  echo "❌ TypeScript check failed on main branch. Commit prevented."
+  exit 1
+fi
+
+# If we're on another branch and type-check failed, show warning but allow commit
+if [ "$BRANCH" != "main" ] && [ $TYPE_CHECK_RESULT -ne 0 ]; then
+  echo "⚠️ Warning: TypeScript check failed, but commit allowed on non-main branch."
+fi
+
+# Run ESLint
+npx eslint --fix "src/**/*.{ts,tsx}"
+
+exit 0

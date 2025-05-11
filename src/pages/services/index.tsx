@@ -10,7 +10,7 @@ type Service = {
     title: string;
     description: string;
     icon?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   };
 };
 

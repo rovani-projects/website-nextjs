@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the name of the branch being pushed to
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# If pushing to main, run type check as an additional safety measure
+if [ "$BRANCH" = "main" ]; then
+  echo "Pushing to main branch. Running TypeScript check..."
+  npx tsc --noEmit
+  if [ $? -ne 0 ]; then
+    echo "❌ TypeScript check failed. Push to main prevented."
+    exit 1
+  fi
+fi
+
+exit 0
