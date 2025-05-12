@@ -15,7 +15,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Growth Architecture for Nonprofits and Emerging Enterprises</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Rovani Projects specializes in guiding organizations through critical growth transitions. Whether you're a nonprofit evolving beyond your founding phase or a business scaling from $5M to $200M, we transform reactive operations into strategic systems that support sustainable growth and amplified impact.
+              Rovani Projects specializes in guiding organizations through critical growth transitions. Whether you&apos;re a nonprofit evolving beyond your founding phase or a business scaling from $5M to $200M, we transform reactive operations into strategic systems that support sustainable growth and amplified impact.
             </p>
             <Link
               href="/contact"
