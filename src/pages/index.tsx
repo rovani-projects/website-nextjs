@@ -53,7 +53,7 @@ export default function Home() {
               <Link
                 href="/services"
                 className={cn(
-                  "bg-[#2B65A7] border-2 border-white",
+                  "bg-chicago-blue border-2 border-white",
                   "text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center",
                   "hover:bg-white/10 transition-colors"
                 )}
@@ -73,7 +73,7 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Transforming Organizations for Sustainable Growth</h2>
                 <p className="text-gray-700 mb-4">
-                  Whether you&APOS;re a nonprofit evolving beyond your founding phase or a business scaling from $5M to $200M,
+                  Whether you&apos;re a nonprofit evolving beyond your founding phase or a business scaling from $5M to $200M,
                   we provide the expertise needed to navigate complex transitions.
                 </p>
                 <p className="text-gray-700">
@@ -107,7 +107,7 @@ export default function Home() {
               <div className="h-1 w-12 bg-chicago-blue"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions to drive your organization&APOS;s growth and success
+              Comprehensive solutions to drive your organization&apos;s growth and success
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-chicago-red transition-colors">Strategic Systems Implementation</h3>
                 <p className="text-gray-600">
-                  We implement scalable systems and structured workflows that transform operational chaos into strategic advantage, whether you&APOS;re managing donor relationships or customer acquisitions.
+                  We implement scalable systems and structured workflows that transform operational chaos into strategic advantage, whether you&apos;re managing donor relationships or customer acquisitions.
                 </p>
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold">Growth-Focused Business</h2>
               </div>
               <p className="text-gray-600 mb-4">
-                The journey from $5M to $200M isn&APOS;t simply about doing more of what worked initially. It requires fundamental transformation.
+                The journey from $5M to $200M isn&apos;t simply about doing more of what worked initially. It requires fundamental transformation.
               </p>
               <p className="text-gray-600 mb-6">
                 At Rovani Projects, we specialize in helping businesses navigate this critical transition—implementing the processes, financial structures, and operational discipline needed to scale reliably and profitably.
@@ -253,7 +253,7 @@ export default function Home() {
               <div className="h-1 w-24 bg-chicago-red"></div>
             </div>
             <p className="text-xl text-gray-600 mb-10">
-              Founded in Chicago with a commitment to the city&APOS;s values of hard work, innovation, and resilience,
+              Founded in Chicago with a commitment to the city&apos;s values of hard work, innovation, and resilience,
               we bring a practical, results-oriented approach to every client engagement.
             </p>
             <Link

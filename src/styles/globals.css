@@ -36,6 +36,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --color-chicago-red: #cf3038;
+  --color-chicago-red-dark: #b02830;
+  --color-chicago-blue: #2b65a7;
+  --color-chicago-blue-light: #92c2dc;
+  --color-chicago-blue-dark: #1e4a7b;
+  --color-chicago-white: #ffffff;
+  --color-background-light: #f6f8fa;
+  --color-background-white: #ffffff;
 }
 
 @theme inline {

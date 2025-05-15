@@ -1,25 +1,30 @@
-import typography from "@tailwindcss/typography";
+// tailwind.config.ts
+import typographyPlugin from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        // Chicago flag colors with hyphen notation
-        "chicago-red": "#CF3038",
-        "chicago-red-dark": "#B02830",
-        "chicago-blue": "#2B65A7",
-        "chicago-blue-light": "#92C2DC",
-        "chicago-blue-dark": "#1E4A7B",
-        "chicago-white": "#FFFFFF",
-        "background-light": "#F6F8FA",
-        "background-white": "#FFFFFF",
+        "chicago-red": "var(--color-chicago-red)",
+        "chicago-red-dark": "var(--color-chicago-red-dark)",
+        "chicago-blue": "var(--color-chicago-blue)",
+        "chicago-blue-light": "var(--color-chicago-blue-light)",
+        "chicago-blue-dark": "var(--color-chicago-blue-dark)",
+        "chicago-white": "var(--color-chicago-white)",
+        "background-light": "var(--color-background-light)",
+        "background-white": "var(--color-background-white)",
       },
       height: {
-        hero: "600px",
+        "hero": "600px",
       },
     },
   },
-  plugins: [typography],
+  plugins: [
+    typographyPlugin,
+  ],
 } satisfies Config;
