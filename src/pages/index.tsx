@@ -17,20 +17,16 @@ export default function Home() {
       {/* Hero Section with Chicago Skyline */}
       <section className="relative h-hero flex items-center">
         <div className="absolute inset-0 z-0">
-          <div className="relative w-full h-full">
-            {/* Chicago skyline image */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10" />
-            <Image
-              src="/images/chicago-skyline.jpg"
-              alt="Chicago skyline"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-              className="z-0"
-            />
-          </div>
+          <Image
+            src="/images/chicago-skyline.jpg"
+            alt="Chicago skyline"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            className="brightness-75"
+          />
         </div>
-        <div className="container mx-auto px-4 relative z-20">
+        <div className="container mx-auto p-4 relative z-20">
           <div className="max-w-3xl">
             <div className="flex items-center space-x-3 mb-6">
               <span className="text-white font-medium">Chicago-Based Consultancy</span>
@@ -98,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Services Section with Chicago-inspired colors */}
-      <section className="py-20 bg-background-light">
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center space-x-3 mb-4">
@@ -245,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Chicago-Based Callout */}
-      <section className="py-20 bg-background-light">
+      <section className="py-20 bg-grey-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Chicago-Based, Globally Minded</h2>

@@ -36,14 +36,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
-  --color-chicago-red: #cf3038;
-  --color-chicago-red-dark: #b02830;
-  --color-chicago-blue: #2b65a7;
-  --color-chicago-blue-light: #92c2dc;
-  --color-chicago-blue-dark: #1e4a7b;
-  --color-chicago-white: #ffffff;
-  --color-background-light: #f6f8fa;
-  --color-background-white: #ffffff;
+}
+@theme {
+  --color-chicago-red: oklch(0.56 0.1947 23.81);
+  --color-chicago-red-dark: oklch(0.5 0.1718 23.28);
+  --color-chicago-blue: oklch(0.5 0.1215 253.79);
+  --color-chicago-blue-light: oklch(0.79 0.0626 232.23);
+  --color-chicago-blue-dark: oklch(0.4 0.0958 253.31);
+  --color-chicago-white: oklch(1 0 0);
 }
 
 @theme inline {

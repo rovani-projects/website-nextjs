@@ -3,10 +3,7 @@ import typographyPlugin from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -16,15 +13,11 @@ export default {
         "chicago-blue-light": "var(--color-chicago-blue-light)",
         "chicago-blue-dark": "var(--color-chicago-blue-dark)",
         "chicago-white": "var(--color-chicago-white)",
-        "background-light": "var(--color-background-light)",
-        "background-white": "var(--color-background-white)",
       },
       height: {
-        "hero": "600px",
+        hero: "600px",
       },
     },
   },
-  plugins: [
-    typographyPlugin,
-  ],
+  plugins: [typographyPlugin],
 } satisfies Config;
