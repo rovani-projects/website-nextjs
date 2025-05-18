@@ -37,6 +37,14 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
+@theme {
+  --color-chicago-red: oklch(0.56 0.1947 23.81);
+  --color-chicago-red-dark: oklch(0.5 0.1718 23.28);
+  --color-chicago-blue: oklch(0.5 0.1215 253.79);
+  --color-chicago-blue-light: oklch(0.79 0.0626 232.23);
+  --color-chicago-blue-dark: oklch(0.4 0.0958 253.31);
+  --color-chicago-white: oklch(1 0 0);
+}
 
 @theme inline {
   --color-background: var(--background);
