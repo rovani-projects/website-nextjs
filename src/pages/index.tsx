@@ -1,12 +1,18 @@
-// src/pages/index.tsx with hyphen notation for colors
 import Layout from '@/components/layout/Layout';
+import ServiceCards, { Service } from '@/components/services/ServiceCards';
+import { getAllContent } from '@/lib/markdown';
 import { cn } from '@/lib/utils';
-import { ArrowRight, Code, Layers, LineChart, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+type HomeProps = {
+  services: Service[];
+};
+
+export default function Home({ services }: HomeProps) {
   return (
     <Layout>
       <Head>
@@ -85,68 +91,16 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center space-x-3 mb-4">
-              <div className="h-1 w-12 bg-chicago-blue"></div>
+              <div className="h-1 w-12 bg-chicago-red"></div>
               <h2 className="text-3xl font-bold">Our Services</h2>
-              <div className="h-1 w-12 bg-chicago-blue"></div>
+              <div className="h-1 w-12 bg-chicago-red"></div>
             </div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Comprehensive solutions to drive your organization&apos;s growth and success
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Strategic Systems Implementation */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-chicago-red/10 flex items-center justify-center mb-6 group-hover:bg-chicago-red/20 transition-colors">
-                  <LineChart className="text-chicago-red h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-chicago-red transition-colors">Strategic Systems Implementation</h3>
-                <p className="text-gray-600">
-                  We implement scalable systems and structured workflows that transform operational chaos into strategic advantage, whether you&apos;re managing donor relationships or customer acquisitions.
-                </p>
-              </div>
-            </div>
-
-            {/* Financial Maturity & Scaling */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-chicago-blue/10 flex items-center justify-center mb-6 group-hover:bg-chicago-blue/20 transition-colors">
-                  <Layers className="text-chicago-blue h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-chicago-blue transition-colors">Financial Maturity & Scaling</h3>
-                <p className="text-gray-600">
-                  We build financial operations that support ambitious growth. For nonprofits, this means sustainable funding models and efficient program delivery.
-                </p>
-              </div>
-            </div>
-
-            {/* Technology Transformation */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-chicago-blue-light/20 flex items-center justify-center mb-6 group-hover:bg-chicago-blue-light/30 transition-colors">
-                  <Code className="text-chicago-blue h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-chicago-blue transition-colors">Technology Transformation</h3>
-                <p className="text-gray-600">
-                  From outdated legacy systems to fragmented digital tools, we help organizations implement cohesive technology ecosystems that drive efficiency and insight.
-                </p>
-              </div>
-            </div>
-
-            {/* Leadership & Team Development */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-chicago-red/10 flex items-center justify-center mb-6 group-hover:bg-chicago-red/20 transition-colors">
-                  <Users className="text-chicago-red h-7 w-7" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-chicago-red transition-colors">Leadership & Team Development</h3>
-                <p className="text-gray-600">
-                  We mentor leadership teams through the transition from hands-on management to strategic oversight, building the capabilities needed for growth.
-                </p>
-              </div>
-            </div>
-          </div>
+          <ServiceCards services={services} />
         </div>
       </section>
 
@@ -255,3 +209,14 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  // Get all services content
+  const services = getAllContent('services');
+
+  return {
+    props: {
+      services,
+    },
+  };
+};

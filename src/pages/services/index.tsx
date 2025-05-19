@@ -1,18 +1,9 @@
 import Layout from '@/components/layout/Layout';
+import type { Service } from '@/components/services/ServiceCards';
+import ServiceCards from '@/components/services/ServiceCards';
 import { getAllContent } from '@/lib/markdown';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-
-type Service = {
-  slug: string;
-  frontmatter: {
-    title: string;
-    description: string;
-    icon?: string;
-    [key: string]: unknown;
-  };
-};
 
 type ServicesProps = {
   services: Service[];
@@ -35,18 +26,10 @@ export default function Services({ services }: ServicesProps) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="bg-white rounded-lg shadow-md p-8 transition-all hover:shadow-lg"
-              >
-                <h2 className="text-2xl font-semibold mb-4">{service.frontmatter.title}</h2>
-                <p className="text-gray-600 mb-4">{service.frontmatter.description}</p>
-                <span className="text-blue-600 font-medium">Learn more →</span>
-              </Link>
-            ))}
+          <div className="max-w-6xl mx-auto">
+            <ServiceCards
+              services={services}
+            />
           </div>
         </div>
       </div>
