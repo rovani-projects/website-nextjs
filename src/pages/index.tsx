@@ -28,33 +28,20 @@ export default function Home() {
         </div>
         <div className="container mx-auto p-4 relative z-20">
           <div className="max-w-3xl">
-            <div className="flex items-center space-x-3 mb-6">
-              <span className="text-white font-medium">Chicago-Based Consultancy</span>
-            </div>
             <h1 className="text-5xl font-bold mb-6 text-white">Growth Architecture for Nonprofits and Emerging Enterprises</h1>
             <p className="text-xl text-gray-100 mb-8">
-              Rovani Projects specializes in guiding organizations through critical growth transitions. We transform reactive operations into strategic systems that support sustainable growth.
+              <span className='font-bold'>Rovani Projects</span> specializes in guiding organizations through critical growth transitions. We transform reactive operations into strategic systems that support sustainable growth.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
                 className={cn(
-                  "bg-chicago-red hover:bg-chicago-red-dark transition-colors",
+                  "bg-chicago-blue border-2 border-white",
                   "text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center"
                 )}
               >
                 Get in Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/services"
-                className={cn(
-                  "bg-chicago-blue border-2 border-white",
-                  "text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center",
-                  "hover:bg-white/10 transition-colors"
-                )}
-              >
-                Our Services
               </Link>
             </div>
           </div>
@@ -255,7 +242,7 @@ export default function Home() {
             <Link
               href="/contact"
               className={cn(
-                "bg-chicago-red hover:bg-chicago-red-dark transition-colors",
+                "bg-chicago-blue border-2 border-white",
                 "text-white font-semibold py-4 px-8 rounded-lg inline-flex items-center"
               )}
             >

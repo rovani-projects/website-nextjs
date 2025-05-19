@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   const navItems = [
-    { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
@@ -14,8 +14,9 @@ export default function Header() {
       <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <Link
           href="/"
-          className="text-2xl font-bold text-foreground"
+          className="text-2xl font-bold text-foreground flex items-center"
         >
+          <Image src={"/rp-logo.svg"} alt="Rovani Projects Logo" width={50} height={50} />
           Rovani Projects
         </Link>
         <nav>

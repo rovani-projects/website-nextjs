@@ -1,48 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# _Rovani Projects_ - Consultancy Website
 
-## Development
+A modern, responsive website for _Rovani Projects_ consultancy built with Next.js, TypeScript, Tailwind CSS, and Claude Code. This site showcases our business services, projects, and company information through a clean, Chicago-inspired design.
 
-After cloning the repository, run:
+## Features
 
-```bash
-npm run setup-hooks
+- 📱 Fully responsive design optimized for all device sizes
+- 🚀 Fast static site generation for optimal performance
+- 📝 Content management through Markdown files
+- 🎨 Chicago-inspired color scheme and design elements
+- 📊 Showcases services, projects, and company information
+- 📬 Netlify form integration for contact submissions
+
+## Tech Stack
+
+- **Framework**: Next.js (Pages Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom theme
+- **Content**: Markdown with gray-matter and remark
+- **Components**: Custom UI components with shadcn/ui integration
+- **Icons**: Lucide React
+- **Deployment**: Netlify
+
+## Project Structure
+
+```
+/
+├── content/            # Markdown content files
+│   ├── pages/          # Static page content
+│   ├── projects/       # Project case studies
+│   └── services/       # Service descriptions
+├── public/             # Static assets
+│   └── images/         # Site images
+├── src/
+│   ├── components/     # React components
+│   │   ├── layout/     # Layout components
+│   │   └── ui/         # Reusable UI components
+│   ├── lib/            # Utility functions
+│   ├── pages/          # Next.js pages
+│   └── styles/         # Global styles
+└── ...configuration files
 ```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.x or later
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/rovani-projects.git
+   cd rovani-projects
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
+
+## Content Management
+
+Content is managed through Markdown files in the `content/` directory:
+
+- **Pages**: General content pages like About Us
+- **Services**: Service offerings with descriptions
+- **Projects**: Case studies and project showcases
+
+Each Markdown file includes frontmatter for metadata:
+
+```markdown
+---
+title: Strategy Consulting
+description: Develop comprehensive business strategies to achieve your goals
+icon: chart-line
+order: 1
+---
+
+# Content goes here...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The site is configured for deployment on Netlify:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Push your repository to GitHub/GitLab/Bitbucket
+2. Connect your repository to Netlify
+3. Netlify will automatically build and deploy the site
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build production version
+- `npm run export` - Generate static site output
+- `npm run lint` - Run ESLint
+- `npm run postbuild` - Generate sitemap
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+The site uses a Chicago-inspired color scheme defined in `src/styles/globals.css`. You can customize these colors by modifying the CSS variables.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Content
 
-## Deploy on Vercel
+Add or modify content by editing the Markdown files in the `content/` directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Custom UI components can be added to `src/components/`.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For inquiries about this website, please contact projects@rovani.net.
