@@ -125,4 +125,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For inquiries about this website, please contact projects@rovani.net.
+For inquiries about this website, please contact info@rovaniprojects.com.

@@ -15,7 +15,7 @@ export default function Footer() {
                     </div>
                     <div className="mt-6 md:mt-0">
                         <h4 className="font-semibold mb-3">Contact</h4>
-                        <p className="text-muted-foreground">projects@rovani.net</p>
+                        <p className="text-muted-foreground">info@rovaniprojects.com</p>
                     </div>
                 </div>
                 <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
