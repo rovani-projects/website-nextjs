@@ -1,6 +1,6 @@
-# _Rovani Projects_ - Consultancy Website
+# _Rovani Projects, Inc._ - Consultancy Website
 
-A modern, responsive website for _Rovani Projects_ consultancy built with Next.js, TypeScript, Tailwind CSS, and Claude Code. This site showcases our business services, projects, and company information through a clean, Chicago-inspired design.
+A modern, responsive website for _Rovani Projects, Inc._ consultancy built with Next.js, TypeScript, Tailwind CSS, and Claude Code. This site showcases our business services, projects, and company information through a clean, Chicago-inspired design.
 
 ## Features
 

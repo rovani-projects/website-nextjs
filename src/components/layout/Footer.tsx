@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between">
                     <div className="space-y-4">
-                        <h3 className="text-lg font-bold">Rovani Projects</h3>
+                        <h3 className="text-lg font-bold">Rovani Projects, Inc.</h3>
                         <p className="text-muted-foreground max-w-md">
                             Providing expert consulting services to help businesses achieve their goals.
                         </p>
@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
                 <div className="border-t border-border mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-muted-foreground">
-                        © {currentYear} Rovani Projects. All rights reserved.
+                        © {currentYear} Rovani Projects, Inc. All rights reserved.
                     </p>
                     <div className="flex space-x-4">
                         <Link

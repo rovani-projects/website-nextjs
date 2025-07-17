@@ -17,7 +17,7 @@ export default function Header() {
           className="text-2xl font-bold text-foreground flex items-center"
         >
           <Image src={"/rp-logo.svg"} alt="Rovani Projects Logo" width={50} height={50} />
-          Rovani Projects
+          Rovani Projects, Inc.
         </Link>
         <nav>
           <ul className="flex flex-wrap justify-center gap-4 sm:gap-8">
