@@ -13,13 +13,14 @@ A modern, responsive website for _Rovani Projects, Inc._ consultancy built with 
 
 ## Tech Stack
 
-- **Framework**: Next.js (Pages Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom theme
-- **Content**: Markdown with gray-matter and remark
-- **Components**: Custom UI components with shadcn/ui integration
-- **Icons**: Lucide React
-- **Deployment**: Netlify
+- **Framework**: Next.js 16.0.1 (Pages Router)
+- **Language**: TypeScript 5.9.3
+- **Styling**: Tailwind CSS 4.1.16 with custom Chicago-inspired color scheme
+- **Content**: Markdown with gray-matter 4.0.3 and remark 15.0.1
+- **Components**: Custom UI components with shadcn/ui integration (Radix UI + Tailwind)
+- **Icons**: Lucide React 0.552.0
+- **Deployment**: Netlify (static site hosting)
+- **Node.js**: 22.x recommended (18.x minimum)
 
 ## Project Structure
 
@@ -45,8 +46,8 @@ A modern, responsive website for _Rovani Projects, Inc._ consultancy built with 
 
 ### Prerequisites
 
-- Node.js 18.x or later
-- npm
+- Node.js 22.x recommended (18.x minimum)
+- npm 10.x or later
 
 ### Installation
 
@@ -99,25 +100,69 @@ The site is configured for deployment on Netlify:
 
 ## Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build production version
-- `npm run export` - Generate static site output
-- `npm run lint` - Run ESLint
-- `npm run postbuild` - Generate sitemap
+- `npm run dev` - Start development server with hot reload on localhost:3000
+- `npm run build` - Build production version (generates static site to `/out` directory)
+- `npm run lint` - Run ESLint code quality checks
+- `npm run start` - Start production server (not used with static export)
+
+**Build Pipeline:**
+```bash
+npm run build          # Build static site (next build)
+npm run postbuild      # Generate sitemap.xml and robots.txt (next-sitemap)
+```
+
+**Note:** The site is configured for static export, so `npm run build` automatically generates static HTML files. The `npm run export` script is an alias and does the same thing.
 
 ## Customization
 
 ### Colors
 
-The site uses a Chicago-inspired color scheme defined in `src/styles/globals.css`. You can customize these colors by modifying the CSS variables.
+The site uses a Chicago-inspired color scheme defined in [src/styles/globals.css](src/styles/globals.css) using OKLch color space:
+
+```css
+--color-chicago-red: oklch(0.58 0.2343 23.93)
+--color-chicago-blue: oklch(0.73 0.1233 229.5)
+```
+
+These CSS variables are mapped to Tailwind classes in [tailwind.config.ts](tailwind.config.ts). Modify the CSS variables to change the theme globally. Dark mode is supported via the `.dark` class selector.
 
 ### Content
 
-Add or modify content by editing the Markdown files in the `content/` directory.
+Add or modify content by editing Markdown files in the `content/` directory. Each file uses YAML frontmatter for metadata:
+
+**Services** (`content/services/`):
+```yaml
+---
+title: My Service
+description: Service description
+icon: chart-line
+order: 1
+---
+```
+
+**Projects** (`content/projects/`):
+```yaml
+---
+title: Project Name
+date: 2025-01-15
+client: Client Name
+industry: Industry Type
+---
+```
+
+**Pages** (`content/pages/`):
+```yaml
+---
+title: Page Title
+description: Page description
+---
+```
+
+After adding or modifying content, run `npm run build` to regenerate static pages.
 
 ### Components
 
-Custom UI components can be added to `src/components/`.
+Custom UI components can be added to `src/components/`. The project uses a shadcn/ui-inspired pattern with Radix UI and Tailwind CSS. New components should follow the existing patterns in button.tsx and card.tsx.
 
 ## License
 
