@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   // This helps with deployment to different static hosting environments
   basePath: process.env.NODE_ENV === "production" ? "" : "",
   trailingSlash: true, // Append trailing slashes to URLs
+  turbopack: {
+    root: process.cwd(), // Use dynamic project root instead of hardcoded path
+  },
 };
 
 export default nextConfig;
