@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "if [ \"$NODE_ENV\" = \"production\" ]; then next-sitemap; fi",
     "export": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
